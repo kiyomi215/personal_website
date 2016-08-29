@@ -1,0 +1,21 @@
+{
+  "name": "personal_website",
+  "description": "my personal website",
+  "main": "index.js",
+  "authors": [
+    "keeley nakamoto"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
