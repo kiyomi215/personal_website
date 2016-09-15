@@ -1,4 +1,4 @@
-var PersonalWebsite = angular.module('PersonalWebsite', ['ngRoute']);
+var PersonalWebsite = angular.module('PersonalWebsite', ['ngRoute', 'ngMaterial']);
 
 PersonalWebsite.config(['$routeProvider', function($routeProvider) {
   $routeProvider
