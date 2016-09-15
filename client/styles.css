@@ -1,0 +1,15 @@
+.descriptors {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: thin
+  font-size: 20px;
+}
+
+body {
+  background-color: #FFFFFF;
+  background-image: './assets/download.jpg';
+}
