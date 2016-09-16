@@ -1,15 +1,25 @@
+.container{
+  display: flex;
+  color: #ffffff;
+}
+
 .descriptors {
   font-family: 'Roboto', sans-serif;
   font-size: 48px;
+  color: #ffffff;
 }
 
 h3 {
   font-family: 'Roboto', sans-serif;
   font-style: thin
   font-size: 20px;
+  color: #ffffff;
 }
 
 body {
   background-color: #FFFFFF;
-  background-image: './assets/download.jpg';
+  background-image: url('assets/download.jpeg');
+  max-width: 100%;
+  max-height: 100%
+  background-repeat: no-repeat;
 }
