@@ -1,23 +1,31 @@
-var PersonalWebsite = angular.module('PersonalWebsite', ['ngRoute', 'ngMaterial']);
+var personalWebsite = angular.module('personalWebsite', ['ngRoute', 'ngMaterial']);
 
-PersonalWebsite.config(['$routeProvider', function($routeProvider) {
+personalWebsite.config(function($routeProvider) {
   $routeProvider
 
-  .when('/', {
-    templateUrl: 'home/home.tpl.html',
-    controller: 'home/home.ctrl.js'
-  })
+  // .when('/', {
+  //   templateUrl: 'views/components/home/home.tpl.html',
+  //   controller: 'home/home.ctrl.js'
+  // })
 
   .when('/about', {
-    templateUrl: 'about/about.html',
-    controller: 'about/about.ctrl.js'
+    templateUrl: 'client/views/components/about/about.tpl.html',
+    controller: 'aboutController'
   })
 
-  .when('/projects', {
-    templateUrl: 'projects/projects.html',
-    controller: 'projects/projects.ctrl.js'
-  })
+  // .when('/projects', {
+  //   templateUrl: 'views/components/projects/projects.tpl.html',
+  //   controller: 'projects/projects.ctrl.js'
+  // })
 
   .otherwise({redirectTo: '/'});
 
-}]);
+});
+
+personalWebsite.controller('aboutController', function($scope) {
+    $scope.test = 'This should be the about page.';
+});
+
+personalWebsite.controller('mainController', function($scope) {
+    $scope.test = 'This should be the homepage.';
+});
