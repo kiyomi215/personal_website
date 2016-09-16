@@ -9,6 +9,7 @@
   "author": "keeley nakamoto",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "express": "^4.14.0"
   }
 }
