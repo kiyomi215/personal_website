@@ -1,4 +1,4 @@
-var personalWebsite = angular.module('personalWebsite', ['ngRoute', 'ngMaterial']);
+var personalWebsite = angular.module('personalWebsite', ['ngRoute', 'ngMaterial', 'personalWebsite.about']);
 
 personalWebsite.config(function($routeProvider) {
   $routeProvider
@@ -40,9 +40,9 @@ personalWebsite.controller('aboutController', function($scope) {
     $scope.test = 'This should be the about page.';
 });
 
-personalWebsite.controller('projectsController', function($scope) {
-    $scope.test = 'This should be the project page.';
-});
+// personalWebsite.controller('projectsController', function($scope) {
+//     $scope.test = 'This should be the project page.';
+// });
 
 personalWebsite.controller('contactController', function($scope) {
     $scope.test = 'This should be the contact page.';

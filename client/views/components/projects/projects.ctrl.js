@@ -1,3 +1,3 @@
-PersonalWebsite.controller('ProjectsController', ['$scope', function($scope) {
-  $scope.message = 'This is my PROJECTS controller.';
-}])
+personalWebsite.controller('projectsController', function($scope) {
+    $scope.test = 'This should be the project page.';
+});
