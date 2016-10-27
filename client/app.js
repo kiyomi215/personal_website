@@ -3,6 +3,7 @@
 var personalWebsite = angular.module('personalWebsite', [
   'ngRoute',
   'ngMaterial',
+  'ui.bootstrap',
   'personalWebsite.home',
   'personalWebsite.about',
   'personalWebsite.projects',
