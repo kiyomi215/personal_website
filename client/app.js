@@ -42,23 +42,3 @@ personalWebsite.config(function($routeProvider) {
   .otherwise({redirectTo: '/'});
 
 });
-
-// personalWebsite.controller('mainController', function($scope) {
-//     $scope.test = 'This should be the homepage.';
-// });
-//
-// personalWebsite.controller('aboutController', function($scope) {
-//     $scope.test = 'This should be the about page.';
-// });
-//
-// // personalWebsite.controller('projectsController', function($scope) {
-// //     $scope.test = 'This should be the project page.';
-// // });
-//
-// personalWebsite.controller('contactController', function($scope) {
-//     $scope.test = 'This should be the contact page.';
-// });
-//
-// personalWebsite.controller('blogController', function($scope) {
-//     $scope.test = 'This should be the blog  page.';
-// });
