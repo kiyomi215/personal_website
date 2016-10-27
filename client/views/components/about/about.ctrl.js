@@ -1,4 +1,4 @@
-angular.module('personalWebsite.about')
-  .controller('AboutController', ['$scope', function($scope) {
-  $scope.message = 'This is my ABOUT controller.';
-}])
+angular.module('personalWebsite.about', [])
+  .controller('aboutController', ['$scope', function($scope) {
+    $scope.message = 'This is my ABOUT controller.';
+  }]);
