@@ -1,3 +1,5 @@
+"use strict";
+
 var personalWebsite = angular.module('personalWebsite', [
   'ngRoute',
   'ngMaterial',
