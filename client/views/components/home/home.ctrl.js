@@ -1,3 +1,4 @@
-PersonalWebsite.controller('HomeController', ['$scope', function($scope) {
+angular.module('personalWebsite.home', [])
+  .controller('homeController', ['$scope', function($scope) {
   $scope.message = 'This is my HOME controller.';
 }])
