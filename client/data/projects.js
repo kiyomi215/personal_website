@@ -1,3 +1,5 @@
+"use strict";
+
 var projects = [
   {
     id: 'followthru',
