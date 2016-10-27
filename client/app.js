@@ -3,8 +3,9 @@ var personalWebsite = angular.module('personalWebsite', [
   'ngMaterial',
   'personalWebsite.home',
   'personalWebsite.about',
-  'personalWebsite.projects'
-  'personalWebsite.blog',
+  'personalWebsite.projects',
+  'personalWebsite.contact',
+  'personalWebsite.blog'
 ]);
 
 personalWebsite.config(function($routeProvider) {
