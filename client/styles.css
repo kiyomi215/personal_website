@@ -18,8 +18,20 @@ h3 {
 
 body {
   background-color: #FFFFFF;
-  background-image: url('./assets/banner-sparklers.jpeg');
+  /*background-image: url('./assets/banner-sparklers.jpeg');*/
   max-width: 100%;
   max-height: 100%
   background-repeat: no-repeat;
+}
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+.contact_left {
+  background-color: red
+}
+
+.contact_right {
+  background-color: blue
 }

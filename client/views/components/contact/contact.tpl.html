@@ -2,34 +2,55 @@
   <h1>Contact me. <small>Let's make something great together</small></h1>
 </div>
 
-<label for="basic-url">Name</label>
-<div class="input-group input-group-lg">
-  <!-- <span class="input-group-addon" id="basic-addon1">@</span> -->
-  <input type="text" class="form-control" placeholder="Full name" aria-describedby="basic-addon1">
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 contact_left">
+      <div class="centerBlock">
+        <h1>Get in touch</h1>
+          <h5>You can use the form at the right to get in touch immediately.<br /><br />
+            Or, feel free to send an email to keeleynakamoto@gmail.com,
+            at your leisure.
+          </h5>
+        <h1>Let's get social</h1>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-github"></i>
+        <i class="fa fa-angellist"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
+    </div>
+    <div class="col-md-6 contact_right" >
+      <div class="centerBlock">
+        <label for="name">Name</label>
+        <div class="input-group input-group-lg">
+          <input type="text" ng-model="contact.name" class="form-control" placeholder="Full name" aria-describedby="basic-addon1">
+        </div>
 
-<label for="basic-url">Phone number</label>
-<div class="input-group input-group-lg">
-  <input type="text" class="form-control" placeholder="Phone number" aria-describedby="basic-addon2">
-  <!-- <span class="input-group-addon" id="basic-addon2">@example.com</span> -->
-</div>
+        <label for="phone">Phone number</label>
+        <div class="input-group input-group-lg">
+          <input type="text" ng-model="contact.number" class="form-control" placeholder="Phone number" aria-describedby="basic-addon2">
+        </div>
 
-<label for="basic-url">Email address</label>
-<div class="input-group input-group-lg">
-  <!-- <span class="input-group-addon">$</span> -->
-  <input type="text" class="form-control" placeholder="Email" aria-label="Email">
-  <!-- <span class="input-group-addon">.00</span> -->
-</div>
+        <label for="email">Email address</label>
+        <div class="input-group input-group-lg">
+          <input type="email" ng-model="contact.email" required="string" ng-minlength= "3"class="form-control" placeholder="Email" aria-label="Email">
+        </div>
 
-<label for="basic-url">Your message</label>
-<div class="input-group input-group-lg">
-  <!-- <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span> -->
-  <input type="text" class="form-control" placeholder="Message" id="basic-url" aria-describedby="basic-addon3">
-</div>
-<br>
-<button type="submit" class="btn btn-default">Submit</button>
-<div>
-    <h1 class="descriptors">Contact. Contact. Contact.</h1>
-    <h3 class="subdescriptor"> My name's Keeley. Nice to meet you! </h3>
-    <p>{{message}}</p>
+        <label for="message">Your message</label>
+        <div class="input-group input-group-lg">
+          <input type="text" ng-model="contact.message" class="form-control" placeholder="Message" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+
+        <br />
+
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Please send me a copy of my inquiry.</label>
+        </div>
+
+        <br />
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+
+    </div>
+  </div>
 </div>
