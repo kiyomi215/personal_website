@@ -5,26 +5,30 @@
 <label for="name">Name</label>
 <div class="input-group input-group-lg">
   <!-- <span class="input-group-addon" id="basic-addon1">@</span> -->
-  <input type="text" class="form-control" placeholder="Full name" aria-describedby="basic-addon1">
+  <input type="text" ng-model="contact.name" class="form-control" placeholder="Full name" aria-describedby="basic-addon1">
 </div>
 
 <label for="phone">Phone number</label>
 <div class="input-group input-group-lg">
-  <input type="text" class="form-control" placeholder="Phone number" aria-describedby="basic-addon2">
+  <input type="text" ng-model="contact.number" class="form-control" placeholder="Phone number" aria-describedby="basic-addon2">
   <!-- <span class="input-group-addon" id="basic-addon2">@example.com</span> -->
 </div>
 
 <label for="email">Email address</label>
 <div class="input-group input-group-lg">
   <!-- <span class="input-group-addon">$</span> -->
-  <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+  <input type="email" ng-model="contact.email" required="string" ng-minlength= "3"class="form-control" placeholder="Email" aria-label="Email">
   <!-- <span class="input-group-addon">.00</span> -->
 </div>
 
 <label for="message">Your message</label>
 <div class="input-group input-group-lg">
   <!-- <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span> -->
-  <input type="text" class="form-control" placeholder="Message" id="basic-url" aria-describedby="basic-addon3">
+  <input type="text" ng-model="contact.message" class="form-control" placeholder="Message" id="basic-url" aria-describedby="basic-addon3">
+</div>
+<br>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Please send me a copy of my inquiry.</label>
 </div>
 <br>
 <button type="submit" class="btn btn-default">Submit</button>
