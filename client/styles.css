@@ -23,3 +23,15 @@ body {
   max-height: 100%
   background-repeat: no-repeat;
 }
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+.contact_left {
+  background-color: red
+}
+
+.contact_right {
+  background-color: blue
+}
