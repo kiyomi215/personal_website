@@ -21,21 +21,45 @@
 <body>
   <!-- <div ng-controller="mainController"> -->
     <!-- <img class="img-responsive"  id="banner" src="client/assets/banner-sparklers.jpeg" alt="Banner"> -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">keeley</a>
+    <div id="wrap">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">keeley</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About Me</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#contact'>Contact Me</a></li>
+            <li><a href='#blog'>Blog</a></li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">About Me</a></li>
-          <li><a href='#projects'>Projects</a></li>
-          <li><a href='#contact'>Contact Me</a></li>
-          <li><a href='#blog'>Blog</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div>{{ message }}</div>
-    <div ng-view></div>
+      </nav>
+      <div>{{ message }}</div>
+      <div ng-view></div>
+    </div>
+    <div class="container-fluid">
+      <div id="footer">
+          <div class="row">
+            <div class="col-md-4">
+              <p>
+                &copy Keeley Nakamoto
+              </p>
+            </div>
+              <div class="col-md-4">
+                <p>
+                  St. Louis, Missouri
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-angellist"></i>
+                <i class="fa fa-twitter"></i>
+              </div>
+          </div>
+        </div>
+    </div>
   <!-- Angular Material -->
   <script src="bower_components/angular-aria/angular-aria.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
