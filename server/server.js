@@ -12,6 +12,20 @@ console.log('Listening at port: ' + port);
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
 
+//exports.sendMail = function(req,res) {
+  var data = req.body;
+
+  transporter.sendMail({
+    from: data.contactEmail,
+    to: 'keeleynakamoto@gmail.com',
+    subject: 'Message from ' + data.contactName,
+    text: data.contactMsg
+  });
+
+  res.json(data);
+}
+
+
 var mailOptions = {
   from: ''
   to:'',
