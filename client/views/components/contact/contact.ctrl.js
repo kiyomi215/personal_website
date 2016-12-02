@@ -3,7 +3,6 @@
 angular.module('personalWebsite.contact', [])
   .controller('contactController', ['$scope', '$http', function($scope, $http) {
     function sendEmail(email) {
-
       var email = {
         sender: 'Keeley Nakamoto',
         recipient: $scope.contact.name,
@@ -13,12 +12,12 @@ angular.module('personalWebsite.contact', [])
         sendCopy: true
       }
 
-      $http.post('/contact-form', data)
-        .success(function(data, status, headers, config) {
-          console.log(data);
+      $http.post('/contact-form', email)
+        .success(function(email, status, headers, config) {
+          console.log(email);
         })
-        .error(function(data, status, headers, config) {
-          console.log('Error: ', data);
+        .error(function(email, status, headers, config) {
+          console.log('Error: ', email);
         })
     };
 
