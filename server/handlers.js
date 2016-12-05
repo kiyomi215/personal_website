@@ -12,6 +12,12 @@ exports.sendEmail = function(req, res) {
     to: 'keeleynakamoto@gmail.com',
     subject: 'Message from ' + email.contact.name,
     text: email.contact.number + ' ' + email.contact.message
+  }, function(err, data) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('Message sent: ', data.response);
+    }
   });
   res.json(email);
 }
