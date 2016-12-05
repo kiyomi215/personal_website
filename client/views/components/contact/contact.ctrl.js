@@ -12,11 +12,11 @@ angular.module('personalWebsite.contact', [])
       };
 
       $http.post('/contact-form', email)
-        .then(function(email, status) {
-          console.log('Success! 'email);
+        .then(function(response) {
+          console.log('Success! ', response.data);
         })
-        .catch(function(email, status) {
-          console.log('Error: ', email);
+        .catch(function(err) {
+          console.log('Error: ', err);
         })
     };
 
