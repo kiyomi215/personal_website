@@ -8,3 +8,6 @@ app.use(express.static(__dirname + '/../client'));
 
 app.listen(port);
 console.log('Listening at port: ' + port);
+
+var handler = require('./handlers.js');
+app.post('/contact-form', handler.sendEmail);
