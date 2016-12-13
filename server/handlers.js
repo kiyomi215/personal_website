@@ -6,10 +6,14 @@ var transporter = nodemailer.createTransport();
 
 exports.sendEmail = function(req, res) {
   var email = req.body;
+  var recipient;
   if(email.sendCopy) {
-    var recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>', email.contact.name + ' <'email.contact.email'>';
+    recipient = {
+    name: 'Keeley Nakamoto',
+    address: 'keeleynakamoto@gmail.com'
+}' <'email.contact.email'>';
   } else {
-    var recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
+    recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
   }
 
   transporter.sendMail({
@@ -24,5 +28,6 @@ exports.sendEmail = function(req, res) {
       console.log('Message sent: ', info.response);
     }
   });
-  res.json(email);
+
+  res.json('Here it is       'email);
 }
