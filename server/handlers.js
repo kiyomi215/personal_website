@@ -9,9 +9,9 @@ exports.sendEmail = function(req, res) {
   var recipient;
   if(email.sendCopy) {
     recipient = {
-    name: 'Keeley Nakamoto',
-    address: 'keeleynakamoto@gmail.com'
-}' <'email.contact.email'>';
+      name: 'Keeley Nakamoto',
+      address: 'keeleynakamoto@gmail.com'
+    }
   } else {
     recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
   }
@@ -29,5 +29,5 @@ exports.sendEmail = function(req, res) {
     }
   });
 
-  res.json('Here it is       'email);
+  res.json('Here it is       ', email);
 }
