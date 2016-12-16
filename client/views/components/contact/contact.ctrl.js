@@ -2,14 +2,15 @@
 
 angular.module('personalWebsite.contact', [])
   .controller('contactController', ['$scope', '$http', function($scope, $http) {
-    var email = {
+    $scope.email = {
       name: $scope.contact.name,
       phone: $scope.contact.number,
       email: $scope.contact.email,
       message: $scope.contact.message,
       sendCopy: true
     };
-    function sendEmail(email) {
+
+    $scope.sendEmail = function(email) {
 
       $http.post('/contact-form', email)
         .then(function(response) {
