@@ -4,8 +4,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport();
 
 
-exports.sendEmail = function(req, res) {
-  var email = req.body;
+exports.sendEmail = function(email) {
+  //var email = req.body;
   var recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
   // if(email.sendCopy) {
   //   recipient = {
@@ -16,7 +16,7 @@ exports.sendEmail = function(req, res) {
   //   recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
   // }
 
-  console.log(req.body);
+  console.log('here is the req.body: ', email);
   transporter.sendMail({
     from: email.email,
     to: recipient,
