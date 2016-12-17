@@ -10,4 +10,10 @@ app.listen(port);
 console.log('Listening at port: ' + port);
 
 var handler = require('./handlers.js');
-app.post('/contact-form', handler.sendEmail);
+app.post('/contact-form', function(req,res) {
+  var email = req.body;
+  console.log(email);
+  handler.sendEmail(function(email){
+    res.status(200).json(email);
+  })
+});

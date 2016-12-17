@@ -10,9 +10,9 @@ angular.module('personalWebsite.contact', [])
       sendCopy: true
     };
 
-    $scope.sendEmail = function(email) {
+    $scope.sendEmail = function($scope.email) {
 
-      $http.post('/contact-form', email)
+      $http.post('/contact-form', $scope.email)
         .then(function(response) {
           console.log('Success! ', response.data);
         })
