@@ -2,23 +2,29 @@
 
 angular.module('personalWebsite.contact', [])
   .controller('contactController', ['$scope', '$http', function($scope, $http) {
-    $scope.email = {
-      name: $scope.contact.name,
-      phone: $scope.contact.number,
-      email: $scope.contact.email,
-      message: $scope.contact.message,
-      sendCopy: true
+
+    $scope.sendEmail = function(email) {
+      $http.post('/contact-form', email)
+      .then(function(response) {
+        console.log('Success! ', response.data);
+      })
+      .catch(function(err) {
+        console.log('Error: ', err);
+      })
     };
 
-    $scope.sendEmail = function($scope.email) {
+    $scope.createEmail = function(){
+      var email = {
+      name: $scope.contactName,
+      phone: $scope.contactNumber,
+      email: $scope.contactEmail,
+      message: $scope.contactMessage
+      //sendCopy: true
+      };
+      console.log('here is the email: ', email);
+      $scope.sendEmail(email);
 
-      $http.post('/contact-form', $scope.email)
-        .then(function(response) {
-          console.log('Success! ', response.data);
-        })
-        .catch(function(err) {
-          console.log('Error: ', err);
-        })
     };
+
 
   }]);
