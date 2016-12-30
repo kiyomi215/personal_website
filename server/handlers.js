@@ -6,7 +6,7 @@ var transporter = nodemailer.createTransport();
 
 exports.sendEmail = function(email) {
   //var email = req.body;
-  var recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
+  //var recipient = '"Keeley Nakamoto" <keeleynakamoto@gmail.com>';
   // if(email.sendCopy) {
   //   recipient = {
   //     name: 'Keeley Nakamoto',
@@ -18,8 +18,8 @@ exports.sendEmail = function(email) {
 
   console.log('here is the req.body: ', email);
   transporter.sendMail({
-    from: email.email,
-    to: recipient,
+    from: 'keeleynakamoto@gmail.com',
+    to: email.email,
     subject: 'Message from ' + email.name,
     text: email.number + ' ' + email.message
   }, function(err, info) {
@@ -29,6 +29,4 @@ exports.sendEmail = function(email) {
       console.log('Message sent: ', info.response);
     }
   });
-
-  res.json('Here it is       ', email);
 }
