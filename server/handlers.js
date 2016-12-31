@@ -26,6 +26,7 @@ exports.sendEmail = function(email) {
     if(err) {
       console.log(err);
     } else {
+      console.log(info);
       console.log('Message sent: ', info.response);
     }
   });
